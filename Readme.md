@@ -1,0 +1,35 @@
+Notas de aplicación simple:
+
+
+
+Objetivo de aplicación: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
