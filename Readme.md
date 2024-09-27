@@ -43,6 +43,7 @@ Siempre enfocada al cliente - Función misma o desarrolladores
 Aquí vamos a colocar las tablas existentes en la aplicaión así como una descripción sencilla de su uso dentro de la aplicación
 
 | Nombre | Lugar | Descripción | Notas adicionales |
+| --- | --- | --- | --- |
 | Trabajadores | Sharepoint_url | Almacena el nombre de los trabajadores | Tiene permisos de accesibilidad solo para los propietarios |
 
 
