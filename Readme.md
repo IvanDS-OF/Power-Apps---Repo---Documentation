@@ -44,19 +44,25 @@ Aquí vamos a colocar las tablas existentes en la aplicaión así como una descr
 
 | Nombre | Lugar | Descripción | Notas adicionales |
 | --- | --- | --- | --- |
-| Trabajadores | Sharepoint_url | Almacena el nombre de los trabajadores | Tiene permisos de accesibilidad solo para los propietarios |
+| Trabajadores | Sharepoint_url ó Dataverse | Almacena el nombre de los trabajadores | Tiene permisos de accesibilidad solo para los propietarios |
 
-
-
-
-#### Columnas
+> Columnas
 
 Aquí vamos a colocar las columnas dentro de cada tabla así como una descripción de su uso dentro de la aplicación y configuración avanzada importante.
 
 | Nombre | Tabla | Configurazión | Notas | 
 | --- | --- | --- | --- |
-| FechaInicioVacaciones | Trabajadores | Incluir Hora: No \n Esta columna debe contener información: Si \n Aplicar valores únicos: No  **Agregar a todos los tipos de contenido**: Si | NA | 
+| FechaInicioVacaciones | Trabajadores | **Incluir Hora:** No. **Esta columna debe contener información:** Si. **Aplicar valores únicos:** No  **Agregar a todos los tipos de contenido**: Si | NA | 
 
+
+#### Páginas 
+
+Tenemos que colocar una visualización de la página así como enumerar cada parte importante y colocar de bajo una tabla en donde describiremos la funcionalidad o descripción de cada elemento
+
+| Elemento | Página | Función | Notas adicionales | 
+| --- | --- | --- | --- | --- | 
+| 1: Boton Atrás | Página 2 . Formulario para añadir registro | Retroceder a la página principal | **OnSlect**: *Navigate(MainPage)* . Visible: IF(Description; True; False) | 
+|  |  |  |  |  | 
 
 
 ### Firmas 
