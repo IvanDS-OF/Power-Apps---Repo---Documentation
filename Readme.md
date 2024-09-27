@@ -55,7 +55,7 @@ Aquí vamos a colocar las columnas dentro de cada tabla así como una descripci�
 
 | Nombre | Tabla | Configurazión | Notas | 
 | --- | --- | --- | --- |
-| FechaInicioVacaciones | Trabajadores | Incluir Hora: No > Esta columna debe contener información: Si > Aplicar valores únicos: No, Agregar a todos los tipos de contenido: Si | NA | 
+| FechaInicioVacaciones | Trabajadores | Incluir Hora: No \n Esta columna debe contener información: Si \n Aplicar valores únicos: No  **Agregar a todos los tipos de contenido**: Si | NA | 
 
 
 
