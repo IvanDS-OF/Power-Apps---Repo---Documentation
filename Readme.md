@@ -60,7 +60,7 @@ Aquí vamos a colocar las columnas dentro de cada tabla así como una descripci�
 Tenemos que colocar una visualización de la página así como enumerar cada parte importante y colocar de bajo una tabla en donde describiremos la funcionalidad o descripción de cada elemento
 
 | Elemento | Página | Función | Notas adicionales | 
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | 
 | 1: Boton Atrás | Página 2 . Formulario para añadir registro | Retroceder a la página principal | **OnSlect**: *Navigate(MainPage)* . Visible: IF(Description; True; False) | 
 |  |  |  |  |  | 
 
