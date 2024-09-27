@@ -38,9 +38,25 @@ Siempre enfocada al cliente - Función misma o desarrolladores
 
 ### Temas específcos (Desarrollador)
 
+#### Tablas
+
+Aquí vamos a colocar las tablas existentes en la aplicaión así como una descripción sencilla de su uso dentro de la aplicación
+
+| Nombre | Lugar | Descripción | Notas adicionales |
+| Trabajadores | Sharepoint_url | Almacena el nombre de los trabajadores | Tiene permisos de accesibilidad solo para los propietarios |
 
 
-### 
+
+
+#### Columnas
+
+Aquí vamos a colocar las columnas dentro de cada tabla así como una descripción de su uso dentro de la aplicación y configuración avanzada importante.
+
+
+
+
+
+### Firmas 
 
 
 
