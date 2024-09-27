@@ -54,7 +54,7 @@ Aquí vamos a colocar las tablas existentes en la aplicaión así como una descr
 Aquí vamos a colocar las columnas dentro de cada tabla así como una descripción de su uso dentro de la aplicación y configuración avanzada importante.
 
 | Nombre | Tabla | Configurazión | Notas | 
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | FechaInicioVacaciones | Trabajadores | Incluir Hora: No > Esta columna debe contener información: Si > Aplicar valores únicos: No, Agregar a todos los tipos de contenido: Si | NA | 
 
 
