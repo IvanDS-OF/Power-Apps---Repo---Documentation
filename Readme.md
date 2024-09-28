@@ -90,16 +90,24 @@ The second Item reflexes a variable to create a Json with information from other
 | Categoría | Npmbre | Inicialización | Función | Código | Uso en |
 | --- | --- | --- | --- | --- | --- |
 | Global | varNombreUser | Iniciando la aplicación | Tener registrado el nombre del usuario que está iniciando la aplicación | En App -> **OnStart**:*Set(varUsuarioNombre;User().FullName)* | Página: Página2, Galeria: Registro |
-| Global | varCode | Al presionar el botón **Generar QR** | Almacenar información de los InputText en un Json | Set(
+| Global | varCode | Al presionar el botón **Generar QR** | Almacenar información de los InputText en un Json | 1 | Página: MainScreen |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+
+1:
+
+´´´
+Set(
     varCode; 
     "Organizador : " & inOrganizador.Text & Char(10) &
     "Lugar : " & inLugar.SelectedText.Value & Char(10) & 
     "Departamento : " & inDepartamento.SelectedText.Value & Char(10) &
     "Motivo : " & inMotivo.SelectedText.Value & Char(10) & 
     "Fecha : " & inFecha.SelectedDate & Char(30)
-) | Página: MainScreen |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+)
+
+//This creates a Json to send the information as a JSON to the QR generator page
+´´´
 
 
 ### Firmas 
