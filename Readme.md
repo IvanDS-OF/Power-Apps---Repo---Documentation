@@ -26,13 +26,25 @@ Siempre enfocada al cliente - Función misma o desarrolladores
 
 ### Portada 
 
-
-
-### Propósito
-
++ Nombre de la aplicación
++ Desarrollador
++ Propietario del proyecto
+* Fecha de inicio de desarrollo
+* Función/Departamento/Cliente
++ Gestor del Proyecto
 
 
 ### Temas generales (función)
+
+Se describen de forma general una justificación para desarrollar la aplicación.
+
+Imformación sobre: 
+
++ Bases de datos utilizadas 
++ Dónde se encuentran las bases de datos 
++ Usuarios (Administradores, Propietarios, Usuarios finales)
++ + Descripción de roles de los usuarios
++ Un boceto de la visualización o visualizaciones de las interfaces de usuario. 
 
 
 
@@ -57,12 +69,37 @@ Aquí vamos a colocar las columnas dentro de cada tabla así como una descripci�
 
 #### Páginas 
 
+**Titulo de página**
+
 Tenemos que colocar una visualización de la página así como enumerar cada parte importante y colocar de bajo una tabla en donde describiremos la funcionalidad o descripción de cada elemento
+
+**Foto**
 
 | Elemento | Página | Función | Notas adicionales | 
 | --- | --- | --- | --- | 
-| 1: Boton Atrás | Página 2 . Formulario para añadir registro | Retroceder a la página principal | **OnSlect**: *Navigate(MainPage)* . Visible: IF(Description; True; False) | 
+| 1: Boton Atrás | Página 2 . Formulario para añadir registro | Retroceder a la página principal | **OnSlect**: *Navigate(MainPage)* . **Visible**: *IF(Description; True; False)* | 
 |  |  |  |  |  | 
+
+
+#### Variables 
+
+Aquí tenemos que colocar información sobre nuestras variables
+
+The second Item reflexes a variable to create a Json with information from other **Input Text**, this is usefull when you want to send this information to a page to create a QR code at the end.
+
+| Categoría | Npmbre | Inicialización | Función | Código | Uso en |
+| --- | --- | --- | --- | --- | --- |
+| Global | varNombreUser | Iniciando la aplicación | Tener registrado el nombre del usuario que está iniciando la aplicación | En App -> **OnStart**:*Set(varUsuarioNombre;User().FullName)* | Página: Página2, Galeria: Registro |
+| Global | varCode | Al presionar el botón **Generar QR** | Almacenar información de los InputText en un Json | Set(
+    varCode; 
+    "Organizador : " & inOrganizador.Text & Char(10) &
+    "Lugar : " & inLugar.SelectedText.Value & Char(10) & 
+    "Departamento : " & inDepartamento.SelectedText.Value & Char(10) &
+    "Motivo : " & inMotivo.SelectedText.Value & Char(10) & 
+    "Fecha : " & inFecha.SelectedDate & Char(30)
+) | Página: MainScreen |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
 
 
 ### Firmas 
