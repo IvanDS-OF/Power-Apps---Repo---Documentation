@@ -29,8 +29,8 @@ Siempre enfocada al cliente - Función misma o desarrolladores
 + Nombre de la aplicación
 + Desarrollador
 + Propietario del proyecto
-* Fecha de inicio de desarrollo
-* Función/Departamento/Cliente
++ Fecha de inicio de desarrollo
++ Función/Departamento/Cliente
 + Gestor del Proyecto
 
 
