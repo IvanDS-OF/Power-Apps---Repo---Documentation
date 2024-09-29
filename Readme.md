@@ -96,7 +96,7 @@ The second Item reflexes a variable to create a Json with information from other
 
 1:
 
-´´´
+``` JAVA
 Set(
     varCode; 
     "Organizador : " & inOrganizador.Text & Char(10) &
@@ -105,9 +105,8 @@ Set(
     "Motivo : " & inMotivo.SelectedText.Value & Char(10) & 
     "Fecha : " & inFecha.SelectedDate & Char(30)
 )
-
 //This creates a Json to send the information as a JSON to the QR generator page
-´´´
+```
 
 
 ### Firmas 
