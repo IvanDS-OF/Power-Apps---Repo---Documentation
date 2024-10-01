@@ -111,6 +111,9 @@ Set(
 
 ### Firmas 
 
+| Project owner | Project Manager  | Key user | 
+| --- | --- | --- |
+| singature | signature | signature | 
 
 
 
@@ -133,13 +136,27 @@ La documentación debe contener información sobre:
 
 Primero es necesario tener una cuenta de Microsoft que nos permita dsarrollar aplicaciones, así como acceso al Data Verse
 
-Lo rimero que tenemos que pensar es en la estructura de la información, ya que primero se crea una tabla [dentro del dataverse] y lueo se crea la aplicación. CREAMOS LA TABLA
+Lo primero que tenemos que tener en cuenta es el requerimiento del cliente, considerar la necesidad real de desarrollar una aplicación para saber qué preguntar, conocer las expectativas del cliente y tener una estimación de tiempo de entrega. 
 
-Para esto podemos haer uso de **Análisis de Requisitos Funcionales**, básicamente es hacer un análisis de qué información va a estar anejando la aplicación. 
+Posterioemente tenemos que ver la distribuci´´on de la información, los agentes y entidades que intervienen. En ocaciones las bases de datos ya están creadas pero en ocaciones no, y es necesario hacer un análisis para tener una estructura que nos brinde escalabilidad y rapidez a la hora de hacer las consultas de información. 
 
-+ Lista de funcionalidades: Especifica todas las funcionalidades que la aplicación debe ofrecer
-+ Identificación de entidades clave: Identifica las entidades principales que manejará tu aplicación (por ejemplo, usuarios, productos, pedidos, etc.).
-+ Determina las relaciones: Define las relaciones entre esas entidades (por ejemplo, un usuario puede tener varios pedidos).
+> Para esto podemos haer uso de **Análisis de Requisitos Funcionales**, básicamente es hacer un análisis de qué información va a estar anejando la aplicación. 
+
+> + Lista de funcionalidades: Especifica todas las funcionalidades que la aplicación debe ofrecer
+> + Identificación de entidades clave: Identifica las entidades principales que manejará tu aplicación (por ejemplo, usuarios, productos, pedidos, etc.).
+> + Determina las relaciones: Define las relaciones entre esas entidades (por ejemplo, un usuario puede tener varios pedidos).
+
+
+Luego es necesario hacer los bocetos de las interfaces gráficas. Pueden ser dibujos hechos a mano o, en caso de que sea requerido por el cliente, desarrollar una propuesta usando un software especializado (Figma).
+
+Crear el entorno de desarrollo (aplica solamente para desarrollos con código). Dado que el repo es para el uso de Power Apps, se puede considerar a Power Platform como la plataforma de desarrollo. Solamente si es importante considerar en dónde se van a alojar las bases de datos y la forma en cómo se va a consultar la información.
+
+Luego es necesario crear un entorno de Despliegue - Power Platform - Es necesario considerar la realización d los tests unitarios o tests integrados con la finalidad de asegurar la calidad de la información y la solución final. 
+
+> Nota: Otra parte importante ya fuera del desarrollo pero parte de la solución completa es el tema de la **Retroalimentación del cliente** para mejorar algún aspecto o considerar migraciones de información, la retroalimentación es durante y al final del desarrollo de la solución, [UAT]
+
+
+
 
 
 
