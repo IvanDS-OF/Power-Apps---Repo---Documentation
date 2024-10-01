@@ -58,6 +58,44 @@ El proyecto consiste en el desarrollo de dos aplicaciones para una empresa que r
 |  |  |  |
 
 
+**Variables y Funcinoes**
+
+``` Java 
+// Texto original
+Set(TextScanned;First(BarcodeReader1.Barcodes).Value & Char(100))
+;;
+// Extraer el valor de "Organizador"
+Set(organizador; Mid(TextScanned; 
+Find("Organizador : "; TextScanned) + Len("Organizador : "); 
+(Find("Lugar :"; TextScanned) - 1) - (Find("Organizador : "; TextScanned) + Len("Organizador : "))
+))
+;;
+// Extraer el valor "Lugar"
+
+;;
+// Extraer el valor "Motivo"
+
+;;
+// Extraer el valor "Departamento"
+
+;;
+// Extraer el valor "Fecha"
+
+;;
+//
+
+;;
+//
+```
+
+Personal	Lugar	Motivo	Organizador	Departamento	Fecha de Junta
+
+
+
+
+
+
+
 
 ## Aplicación 2: Registro de asistencia - Meetings: Users
 
