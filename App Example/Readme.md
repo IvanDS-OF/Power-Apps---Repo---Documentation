@@ -18,8 +18,26 @@ El proyecto consiste en el desarrollo de dos aplicaciones para una empresa que r
 
 ### Temas generales (función)
 
+**Boceto gráfico**
+
+**Funcionalidad principal**
+
+**Almacenamiento de la información**
+
+**Consideración-Notas de las bases de datos**
+
+| Nombre | URL | Notas | Encargado | Accesos |
+| --- | --- | --- | --- | --- |
+| Data Admin | Sharepoint, Excel - **URL** | Funciona como BASE para los Dropdowns | IT Name | NA |
+| Final Data | Sharepoint, Excel - **URL** | Base final donde tenemos toda la información | IT Name | Gerente: Edición |
+|  |  |  |  |  |
+
+**Flujo de información**
+
+
 
 ### Temas específicos (desarrollador)
+
 
 
 #### Páginas
