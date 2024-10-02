@@ -40,46 +40,63 @@ Tendremos diversos campos editables en donde colocaremos la información relevan
 | Nave 10 |  |  |
 
 
-**Almacenamiento de la información**
+**Almacenamiento de la información:** La información que se muestra en los Dropdown de la aplicación se va a encontrar en la base de datos *Data Admin*. 
 
 **Consideración-Notas de las bases de datos**
 
 | Nombre | URL | Notas | Encargado | Accesos |
 | --- | --- | --- | --- | --- |
 | Data Admin | Sharepoint, Excel - **URL** | Funciona como BASE para los Dropdowns | IT Name | NA |
-| Final Data | Sharepoint, Excel - **URL** | Base final donde tenemos toda la información | IT Name | Gerente: Edición |
 |  |  |  |  |  |
 
-**Flujo de información**
+**Flujo de información** [Uso de Visio]
 
-
+Excel de Sharepoint -> Applicación
 
 ### Temas específicos (desarrollador)
 
-
-
-#### Páginas
-
-
-#### GUI - Atributos
+#### Páginas - GUI - Atributos
 
 **Imagen**
 
 
 | No. | Nombre y objeto | Especificaciones | 
 | --- | --- | --- |
-| 1 | Label2_4: Etiqueta de texto | Text: "Organizador" |
-| 2 | inOrganizador: Entrada de Texto | Default: User().FullName |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| 1 | Label2_4: Etiqueta de Texto | **Text:** "Organizador" |
+| 2 | Label2: Etiqueta de Texto | **Text:** "Lugar" |
+| 3 | Label2_3: Etiqueta de Texto | **Text:** "Departamento" |
+| 4 | Label2_2: Etiqueta de Texto | **Text:** "Motivo" |
+| 5 | Label2_1: Etiqueta de Texto | **Text:** "Fecha" |
+| 6 | InOrganizador: Entrada de Texto | **Default:** User().FullName |
+| 7 | InLugar: Lista desplegable | **Items:** Table1.Nave |
+| 8 | InDepartamento: Lista desplegable | **Items:** Table1.Departamento |
+| 9 | InMotivo: Lista desplegable | **Items:** Table1-Motivo |
+| 10 | InFecha: Selector de fecha | **Default:** Today() |
+| 11 | Botón3: Botón | **Text:** "Limpiar" - **OnSelect:** Set(varCode;Blank()) |
+| 12 | Boton1: Botón | **Text:** "Generar QR" - **OnSelect:** *varCode_R1* |
+| 13 | Image1: Imágen | **Image:** "http://quickchart.io/qr?text=" & varCode |
+| 14 | Label4: Etiqueta de texto | **Text:** "El texto contenido es el siguiente: " & varCode |
+| 15 |  |  |
 |  |  |  |
 
 
 **Variables y Funcinoes**
 
+**varCode_R1**
+``` JAVA
+Set(
+    varCode; 
+    "Organizador : " & inOrganizador.Text & Char(10) &
+    "Lugar : " & inLugar.SelectedText.Value & Char(10) & 
+    "Departamento : " & inDepartamento.SelectedText.Value & Char(10) &
+    "Motivo : " & inMotivo.SelectedText.Value & Char(10) & 
+    "Fecha : " & inFecha.SelectedDate & Char(30)
+)
+```
 
 
+
+**********
 
 
 
@@ -89,13 +106,12 @@ Tendremos diversos campos editables en donde colocaremos la información relevan
 
 ### Portada: 
 
-+ Nombre de la aplicación: Meeting: Admin
++ Nombre de la aplicación: Meeting: User
 + Desarrollador: Ivpan Duran Santos
 + Propietario del proyecto: Producción
 + Inicio de desarrollo: **Fecha**
 + Departamento: **Producción**
 + Gestor de Prooyecto: Solutions Architect
-
 
 ### Temas generales (función)
 
@@ -109,7 +125,6 @@ Tendremos diversos campos editables en donde colocaremos la información relevan
 
 | Nombre | URL | Notas | Encargado | Accesos |
 | --- | --- | --- | --- | --- |
-| Data Admin | Sharepoint, Excel - **URL** | Funciona como BASE para los Dropdowns | IT Name | NA |
 | Final Data | Sharepoint, Excel - **URL** | Base final donde tenemos toda la información | IT Name | Gerente: Edición |
 |  |  |  |  |  |
 
@@ -131,8 +146,8 @@ Tendremos diversos campos editables en donde colocaremos la información relevan
 
 | No. | Nombre y objeto | Especificaciones | 
 | --- | --- | --- |
-| 1 | Label2_4: Etiqueta de texto | Text: "Organizador" |
-| 2 | inOrganizador: Entrada de Texto | Default: User().FullName |
+| 1 |  |  |
+| 2 |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
