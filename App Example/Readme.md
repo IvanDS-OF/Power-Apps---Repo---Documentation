@@ -96,7 +96,18 @@ Set(
 
 
 
+
+
+
+
+
 **********
+
+
+
+
+
+
 
 
 
@@ -155,19 +166,74 @@ Solo existe una sola página.
 
 **Imagen**
 
-> NOTA: La aplicación contiene un formulario, que consta de los campos de las columnas de la basse de datos en donde se almacena esta información. 
+> NOTA: La aplicación contiene un formulario, que consta de los campos de las columnas de la basse de datos en donde se almacena esta información. Pero los campos visuales van a ser considerados de forma individual en la documentación porque tienen configuraciones individuales. Pero es importante recordar que están dentro de un Formulario.
 
 | No. | Nombre y objeto | Especificaciones | 
 | --- | --- | --- |
-| 1 |  |  |
-| 2 |  |  |
+| 1 | Departamento_DataCard3: FormObject | **Default:** departamento , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 2 | Fecha de Junta_DataCard1: FormObject | **Default:** fecha , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 3 | Lugar_DataCard1: FormObject | **Default:** lugar , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 4 | Motivo_DataCard1: FormObject | **Default:** motivo , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 5 | Organizador_DataCard1: FormObject | **Default:** organizador , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 6 | Personal_DataCard1: FormObject | **Default:** personal , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 7 | BarcodeReader1: Lector de código de barras | **BeepOnScan:** false, **OnScan:** ,  **Text:** "Escanar QR ara llenar información" |
+| 8 |  |  |
+| 9 |  |  |
+| 10 |  |  |
+| 11 |  |  |
+| 12 |  |  |
+| 13 |  |  |
+| 14 |  |  |
+| 15 |  |  |
+| 16 |  |  |
+| 17 |  |  |
 |  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+
 
 
 **Variables y Funcinoes**
+
+**varCode_R2** Estas variables sirven para hacer manipulación de datos, sirve para descomponer el JSON de la información que nos ofrece el QR y así llenar de forma automática los campos requeridos para lenar el formulario de asistencia sin la intervención de las personas para introducir texto. 
+
+``` JAVA
+// Texto original
+Set(TextScanned;First(BarcodeReader1.Barcodes).Value & Char(100))
+;;
+// Extraer el valor de "Organizador"
+Set(organizador; Mid(TextScanned; 
+Find("Organizador : "; TextScanned) + Len("Organizador : "); 
+(Find("Lugar :"; TextScanned) - 1) - (Find("Organizador : "; TextScanned) + Len("Organizador : "))
+))
+;;
+// Extraer el valor "Lugar"
+Set(lugar; Mid(TextScanned; 
+Find("Lugar : "; TextScanned) + Len("Lugar : "); 
+(Find("Departamento :"; TextScanned) - 1) - (Find("Lugar : "; TextScanned) + Len("Lugar : "))
+))
+;;
+// Extraer el valor "Motivo"
+Set(motivo; Mid(TextScanned; 
+Find("Motivo : "; TextScanned) + Len("Motivo : "); 
+(Find("Fecha :"; TextScanned) - 1) - (Find("Motivo : "; TextScanned) + Len("Motivo : "))
+))
+;;
+// Extraer el valor "Departamento"
+Set(departamento; Mid(TextScanned; 
+Find("Departamento : "; TextScanned) + Len("Departamento : "); 
+(Find("Motivo :"; TextScanned) - 1) - (Find("Departamento : "; TextScanned) + Len("Departamento : "))
+))
+;;
+// Extraer el valor "Fecha"
+Set(fecha; Mid(TextScanned; 
+Find("Fecha : "; TextScanned) + Len("Fecha : "); 
+(Len(TextScanned)) - (Find("Fecha : "; TextScanned) + Len("Fecha : "))
+))
+;;
+//Create a new Form
+NewForm(Form1)
+```
+
+
 
 
 
