@@ -57,7 +57,7 @@ Excel de Sharepoint -> Applicación
 
 #### Páginas - GUI - Atributos
 
-<img src="images/App2_1_numered.png" width="400" />
+<img src="Images/App2_1_numered.png" width="400" />
 
 | No. | Nombre y objeto | Especificaciones | 
 | --- | --- | --- |
@@ -163,7 +163,7 @@ Solo existe una sola página.
 
 #### GUI - Atributos
 
-<img src="images/App1_1_numered.png" width="400" />
+<img src="Images/App1_1_numered.png" width="400" />
 
 > NOTA: La aplicación contiene un formulario, que consta de los campos de las columnas de la basse de datos en donde se almacena esta información. Pero los campos visuales van a ser considerados de forma individual en la documentación porque tienen configuraciones individuales. Pero es importante recordar que están dentro de un Formulario.
 
