@@ -115,11 +115,23 @@ Set(
 
 ### Temas generales (función)
 
+**Justificación:** Esta aplicación va a ser utilizada por los usuarios que en ente caso serían las personas requeridas en la reunión como los Especialistas de Calidad, los Especialistas de Geometría, los Especialistas de componentes de interiores, etc. Usando esta aplicación van a tener la habilidad de escanear un código QR el cual previamente el Organizador debió haber creado, una bez escaneado el código QR ocn la información específica, se mostrará un formulario con la información escaneada para poder enviarla a la base de datos y así registrar su asistencia a la reunión. 
+
 **Boceto gráfico**
+
+[IMAGEN]
 
 **Funcionalidad principal**
 
-**Almacenamiento de la información**
+Tendremos diversos campos editables en donde colocaremos la información relevante de las reuniones. 
+
+| Personal | Lugar | Motivo | Organizador | Departamento | Fecha | 
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  | 
+
+
+
+**Almacenamiento de la información:** La información que se muestra en los Dropdown de la aplicación se va a encontrar en la base de datos *Data Admin*. 
 
 **Consideración-Notas de las bases de datos**
 
@@ -128,8 +140,9 @@ Set(
 | Final Data | Sharepoint, Excel - **URL** | Base final donde tenemos toda la información | IT Name | Gerente: Edición |
 |  |  |  |  |  |
 
-**Flujo de información**
+**Flujo de información** [Uso de Visio para crear el gráfico con las especificaciones]
 
+Aplicación -> Base de datos de Excel.
 
 
 ### Temas específicos (desarrollador)
