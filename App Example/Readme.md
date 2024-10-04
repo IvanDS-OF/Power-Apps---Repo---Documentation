@@ -172,23 +172,22 @@ Solo existe una sola página.
 | --- | --- | --- |
 | 1 | Departamento_DataCard3: FormObject | **Default:** departamento , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
 | 2 | Fecha de Junta_DataCard1: FormObject | **Default:** fecha , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 2.1 | DataCard_Value2: Entrada de Texto | **Format:** "dd/mm/yyyy" |
 | 3 | Lugar_DataCard1: FormObject | **Default:** lugar , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
 | 4 | Motivo_DataCard1: FormObject | **Default:** motivo , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
 | 5 | Organizador_DataCard1: FormObject | **Default:** organizador , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
-| 6 | Personal_DataCard1: FormObject | **Default:** personal , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
-| 7 | BarcodeReader1: Lector de código de barras | **BeepOnScan:** false, **OnScan:** ,  **Text:** "Escanar QR ara llenar información" |
-| 8 |  |  |
-| 9 |  |  |
+| 6 | Personal_DataCard1: FormObject | **Default:** User().FullName , **DisplayMode:** Parent.DisplayMode.View  , **Required** true |
+| 7 | BarcodeReader1: Lector de código de barras | **BeepOnScan:** false, **OnScan:** *varCode_R2*,  **Text:** "Escanar QR ara llenar información" |
+| 8 | Botón1_1: Botón | **Text:** "Limpiar Datos" , **OnSelect:** ResetForm(Form1) |
+| 9 | Botón1: Botón | **Text:** "Enviar", **OnSelect:** SubmitForm(Form1) |
 | 10 |  |  |
-| 11 |  |  |
-| 12 |  |  |
-| 13 |  |  |
-| 14 |  |  |
-| 15 |  |  |
-| 16 |  |  |
-| 17 |  |  |
 |  |  |  |
 
+OTROS
+
+| Nombre y Objeto | Especificccaciones | Notas| 
+| --- | --- | --- |
+| App | **OnStart:** NewForm(Form1) | Sirve para inicializar el formulario cuando se inicie la aplicación. | 
 
 
 **Variables y Funcinoes**
@@ -229,49 +228,9 @@ Find("Fecha : "; TextScanned) + Len("Fecha : ");
 (Len(TextScanned)) - (Find("Fecha : "; TextScanned) + Len("Fecha : "))
 ))
 ;;
-//Create a new Form
+// Creamos un nuevo formulario pero ya con la información dentro. 
 NewForm(Form1)
 ```
-
-
-
-
-
-``` Java 
-// Texto original
-Set(TextScanned;First(BarcodeReader1.Barcodes).Value & Char(100))
-;;
-// Extraer el valor de "Organizador"
-Set(organizador; Mid(TextScanned; 
-Find("Organizador : "; TextScanned) + Len("Organizador : "); 
-(Find("Lugar :"; TextScanned) - 1) - (Find("Organizador : "; TextScanned) + Len("Organizador : "))
-))
-;;
-// Extraer el valor "Lugar"
-Set(lugar; Mid(TextScanned; 
-Find("Lugar : "; TextScanned) + Len("Lugar : "); 
-(Find("Departamento :"; TextScanned) - 1) - (Find("Lugar : "; TextScanned) + Len("Lugar : "))
-))
-;;
-// Extraer el valor "Motivo"
-Set(motivo; Mid(TextScanned; 
-Find("Motivo : "; TextScanned) + Len("Motivo : "); 
-(Find("Fecha :"; TextScanned) - 1) - (Find("Motivo : "; TextScanned) + Len("Motivo : "))
-))
-;;
-// Extraer el valor "Departamento"
-Set(departamento; Mid(TextScanned; 
-Find("Departamento : "; TextScanned) + Len("Departamento : "); 
-(Find("Motivo :"; TextScanned) - 1) - (Find("Departamento : "; TextScanned) + Len("Departamento : "))
-))
-;;
-// Extraer el valor "Fecha"
-Set(fecha; Mid(TextScanned; 
-Find("Fecha : "; TextScanned) + Len("Fecha : "); 
-(Len(TextScanned)) - (Find("Fecha : "; TextScanned) + Len("Fecha : "))
-))
-```
-
 
 
 
