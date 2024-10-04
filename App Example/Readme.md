@@ -131,7 +131,7 @@ Tendremos diversos campos editables en donde colocaremos la información relevan
 
 
 
-**Almacenamiento de la información:** La información que se muestra en los Dropdown de la aplicación se va a encontrar en la base de datos *Data Admin*. 
+**Almacenamiento de la información:** La información que se muestra en los Dropdown de la aplicación se va a encontrar en la base de datos *Final Data*. 
 
 **Consideración-Notas de las bases de datos**
 
@@ -147,15 +147,15 @@ Aplicación -> Base de datos de Excel.
 
 ### Temas específicos (desarrollador)
 
-
-
 #### Páginas
 
+Solo existe una sola página. 
 
 #### GUI - Atributos
 
 **Imagen**
 
+> NOTA: La aplicación contiene un formulario, que consta de los campos de las columnas de la basse de datos en donde se almacena esta información. 
 
 | No. | Nombre y objeto | Especificaciones | 
 | --- | --- | --- |
